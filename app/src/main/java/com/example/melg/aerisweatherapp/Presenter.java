@@ -2,12 +2,12 @@ package com.example.melg.aerisweatherapp;
 
 
 
-public class Presenter implements MainActWeatherMVP.presenter{
+public class Presenter implements MainContract.presenter{
 
-private final MainActWeatherMVP.view view;
+private final MainContract.view view;
 
 
-public Presenter(MainActWeatherMVP.view view){
+public Presenter(MainContract.view view){
     this.view = view;
 }
 

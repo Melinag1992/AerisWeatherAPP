@@ -1,7 +1,11 @@
 package com.example.melg.aerisweatherapp;
 
-public interface MainActWeatherMVP {
+public interface MainContract {
 
+    interface presenter {
+        void changeToCelsuisToggle();
+        void getRetrofit();
+    }
 
     interface view {
         void displayTemp();
@@ -16,8 +20,8 @@ public interface MainActWeatherMVP {
 
     }
 
-    interface presenter {
-        void changeToCelsuisToggle();
-        void getRetrofit();
+    interface getAerisInteractor {
+
     }
+
 }

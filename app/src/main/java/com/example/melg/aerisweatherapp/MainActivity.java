@@ -3,7 +3,7 @@ package com.example.melg.aerisweatherapp;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity implements MainActWeatherMVP.view {
+public class MainActivity extends AppCompatActivity implements MainContract.view {
 
     private String url = "https://api.aerisapi.com/forecasts/";
     private String clientID ="82Zay5xSMItNKQR23ztLt";
