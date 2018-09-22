@@ -27,9 +27,15 @@ dependencies {
     //retrofit
     implementation 'com.squareup.retrofit2:retrofit:2.4.0'
 
+    //Gsonconverter
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+
     //buttterknife
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+
+    //recyclerview
+    implementation 'com.android.support:recyclerview-v7:27.1.0'
 
 
     testImplementation 'junit:junit:4.12'

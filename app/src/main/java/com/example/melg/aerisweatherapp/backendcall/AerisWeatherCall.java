@@ -8,7 +8,7 @@ import retrofit2.http.Query;
 
 public interface AerisWeatherCall {
 
-    @GET("11101?client_id=CLIENT_ID&client_secret=CLIENT_SECRET")
-    Call<WeatherResponseObject> getWeatherBody(@Query("CLIENT_ID") String clientID , @Query("CLIENT_SECRET") String clientSecret);
+    @GET("forecasts/11101?client_id=82Zay5xSMItNKQR23ztLt&client_secret=KRFIo7dd1Bs1R0tCNrqLgAO5XHcjthiKupZXErvo")
+    Call<WeatherResponseObject> getWeatherBody();
 
 }
