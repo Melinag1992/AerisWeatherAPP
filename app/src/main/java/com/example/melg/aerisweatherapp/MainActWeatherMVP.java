@@ -9,9 +9,15 @@ public interface MainActWeatherMVP {
         void displayTime();
         void displayHumidity();
         void displayAverageTemp();
+
+        void displayCelsiusTemp();
+        void displayCelsiusAverageTemp();
+
+
     }
 
     interface presenter {
         void changeToCelsuisToggle();
+        void getRetrofit();
     }
 }
