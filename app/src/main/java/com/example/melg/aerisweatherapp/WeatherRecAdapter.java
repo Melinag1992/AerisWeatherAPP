@@ -7,17 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.melg.aerisweatherapp.model.Periods;
 import com.example.melg.aerisweatherapp.model.Response;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
 public class WeatherRecAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private List<Response> weekDaysWeatherList = new ArrayList<>();
+    private List<Periods> weekDaysWeatherList;
     private Context context;
 
-   public  WeatherRecAdapter(Context context, List<Response> weekdayWeather) {
+   public  WeatherRecAdapter(Context context, List<Periods> weekdayWeather) {
        this.context = context;
        weekDaysWeatherList = weekdayWeather;
     }
@@ -31,12 +31,20 @@ public class WeatherRecAdapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Response response = weekDaysWeatherList.get(position);
+        Periods response = weekDaysWeatherList.get(position);
         holder.onBind(response);
     }
 
     @Override
     public int getItemCount() {
-        return 0;
+        return weekDaysWeatherList.size();
     }
+
+    void populatingResponses(List<Periods> weatherResponses){
+       weekDaysWeatherList.clear();
+       weekDaysWeatherList.add((Periods)weatherResponses);
+       notifyDataSetChanged();
+
+    }
+
 }
